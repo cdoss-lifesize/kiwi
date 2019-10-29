@@ -16,11 +16,14 @@
         <rpm-check-signatures>false</rpm-check-signatures>
         <bootsplash-theme>bgrt</bootsplash-theme>
         <bootloader-theme>openSUSE</bootloader-theme>
-        <type image="oem" filesystem="btrfs" initrd_system="dracut" bootloader="grub2" bootloader_console="serial" kernelcmdline="console=ttyS0 splash" firmware="efi" installiso="true" bootpartition="false" btrfs_root_is_snapshot="true" installboot="install">
+        <type image="oem" filesystem="ext4" initrd_system="dracut" bootloader="grub2" bootloader_console="serial" kernelcmdline="console=ttyS0 splash" firmware="uefi" boottimeout="0" installstick="true" installboot="install">
             <oemconfig>
                 <oem-unattended>true</oem-unattended>
-                <oem-swapsize>1024</oem-swapsize>
-                <oem-multipath-scan>false</oem-multipath-scan>
+                <oem-swap>true</oem-swap>
+                <oem-swapsize>512</oem-swapsize>
+                <oem-boot-title>Test Distro</oem-boot-title>
+                <oem-skip-verify>true</oem-skip-verify> 
+                <oem-silent-boot>true</oem-silent-boot>
             </oemconfig>
             <systemdisk>
                 <volume name="home"/>
